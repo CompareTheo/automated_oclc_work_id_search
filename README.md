@@ -1,6 +1,6 @@
 # OCLC Work ID Retrieval Script
 
-The scripts in this project use various user-selected files (.xlsx and .mrc) to query OCLC's WorldCat Search API V2 for the Work ID associated with each title in the file. 
+The scripts in this project use various user-selected files (.xlsx and .mrc) to query OCLC's WorldCat Search API v.2 for the Work ID associated with each title in the file. 
 
 ## Description
 Addressing title matches across editions and formats presents an ongoing challenge for library technical service staff. Whether synchronizing a bookstore's adoption list with the library's catalog or simplifying the reconciliation of electronic and physical holdings, identifying a reliable data point for comparing editions and material types can be daunting. This project's scripts utilize OCLC's WorldCat Search API v.2, conducting queries to pinpoint bibliographic records with matching ISBNs and extracting the corresponding "Work ID" from the identified record.
