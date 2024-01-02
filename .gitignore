@@ -8,6 +8,7 @@ __pycache__/
 
 # Configuration Files
 *.yaml
+*.yml
 
 # Distribution / packaging
 .Python
