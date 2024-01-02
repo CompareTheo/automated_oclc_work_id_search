@@ -19,5 +19,5 @@ This project is licensed under the Apache-2.0 License - see the LICENSE.md file 
 
 ## Acknowledgments
 
-* OCLC OAuth 2.0 code belongs in its entirety to [Karen Coombs](https://github.com/librarywebchic)
+* OCLC OAuth 2.0 code belongs in its entirety to [Karen Coombs](https://github.com/librarywebchic) and has NOT be substantially changed from its original form.
 * All other idea generation, workflow execution, and code production belongs to [Jason C. Mitchell](https://github.com/CompareTheo)
