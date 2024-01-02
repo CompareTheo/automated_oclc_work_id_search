@@ -9,7 +9,7 @@ Addressing title matches across editions and formats presents an ongoing challen
 
 ### Dependencies
 
-* The WorldCat Search API v.2 requires a client ID and secret that are only available to libraries that maintain a OCLC Cataloging and Metadata subscription (full cataloging) and a FirstSearch/WorldCat Discovery subscription. Both are required.
+* The WorldCat Search API v.2 requires a client ID and secret that are only available to libraries that maintain an OCLC Cataloging and Metadata subscription (full cataloging) and a FirstSearch/WorldCat Discovery subscription. Both are required.
 * Requirements for the OAuth 2.0 portions of these scripts can be found on the [OCLC Developer Network](https://github.com/OCLC-Developer-Network/gists/tree/22a524aff103cc42b3e9be0b600fc13143e6e157/authentication/python) github page.
 * Scripts require the creation of a "config.yml" file consisting of key, secret, auth_url, token_url, and metadata_service_url. A sample yaml configuration file can be found on the [OCLC Developer Network](https://github.com/OCLC-Developer-Network/gists/tree/22a524aff103cc42b3e9be0b600fc13143e6e157/authentication) github page.
 
