@@ -44,7 +44,7 @@ def run_script():
             query_string = row['EAN-13']  # Replace 'QueryColumn' with the actual column name in your spreadsheet
             try:
                 r = wskey.get(serviceURL + f"q={query_string}", headers={"Accept": 'application/json;content="application/json"'})
-                print(r)
+                # print(r)
                 status = r.raise_for_status()
                 parsed = json.loads(r.content)
                 
@@ -53,7 +53,7 @@ def run_script():
                     continue
                 
                 work_id = parsed['bibRecords'][0]['work']['id']
-                print(work_id)
+                # print(work_id)
 
                 # Save the 'Work ID' to the new column
                 queries_df.at[index, 'Work ID'] = work_id
