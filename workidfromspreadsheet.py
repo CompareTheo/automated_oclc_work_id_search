@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 import json
+import sys, os
 from requests.auth import HTTPBasicAuth
 from requests_oauthlib import OAuth2Session
 from oauthlib.oauth2 import BackendApplicationClient
@@ -9,9 +10,18 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk, messagebox
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+    # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
 def run_script():
     # Load configuration from config.yml
-    with open("config.yml", 'r') as stream:
+    with open(resource_path("config.yml", 'r')) as stream:
         config = yaml.safe_load(stream)
 
     # Choose the spreadsheet using a file dialog
@@ -79,6 +89,8 @@ def run_script():
 # Create the GUI
 root = tk.Tk()
 root.title("Work ID Lookup Tool")
+icon = tk.PhotoImage(file=(resource_path("cloud.png")))
+root.iconphoto(True, icon)
 
 # Add a label with an explanation of the script
 explanation_text = "This script queries the OCLC metadata search API service using ISBNs from a user-selected spreadsheet.\n\n"\
