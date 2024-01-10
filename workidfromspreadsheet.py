@@ -21,7 +21,7 @@ def resource_path(relative_path):
 
 def run_script():
     # Load configuration from config.yml
-    with open(resource_path("config.yml", 'r')) as stream:
+    with open(resource_path("config.yml"), 'r') as stream:
         config = yaml.safe_load(stream)
 
     # Choose the spreadsheet using a file dialog
