@@ -1,14 +1,16 @@
+from requests.auth import HTTPBasicAuth
+from requests_oauthlib import OAuth2Session
+from oauthlib.oauth2 import BackendApplicationClient
+from tkinter import filedialog
+from tkinter import ttk, messagebox
+from threading import *
+import yaml
+import tkinter as tk
 import pandas as pd
 import requests
 import json
 import sys, os
-from requests.auth import HTTPBasicAuth
-from requests_oauthlib import OAuth2Session
-from oauthlib.oauth2 import BackendApplicationClient
-import yaml
-import tkinter as tk
-from tkinter import filedialog
-from tkinter import ttk, messagebox
+
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
