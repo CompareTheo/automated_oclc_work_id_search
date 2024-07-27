@@ -74,7 +74,6 @@ def run_script():
                             print(r)
                             status = r.raise_for_status()
                             parsed = json.loads(r.content)
-                            print(parsed)
                             
                             # Check to see if the service returned a matching record. If not, skip the record and continue the loop. 
                             if parsed.get('numberOfRecords', 1) == 0:
@@ -82,11 +81,11 @@ def run_script():
                                 continue
                                 
                             # Where the service returns a matching record, parse the returned JSON to extract the Work ID associated with the record and save it to a variable called work_id
-                            work_id = parsed['bibRecords'][0]['work']['id']
-                            print(work_id)
+                            oclc_number = parsed['bibRecords'][0]['identifier']['oclcNumber']
+                            print(oclc_number)
 
-                            # Add the work_id to the 941 field in the MARC record
-                            new_field = Field(tag='941', indicators=[' ', ' '], subfields=[Subfield(code='f', value=work_id)])
+                            # Add the oclc_number to the 941 field in the MARC record
+                            new_field = Field(tag='941', indicators=[' ', ' '], subfields=[Subfield(code='f', value=oclc_number)])
                             record.add_field(new_field)
 
                         except KeyError as e:
