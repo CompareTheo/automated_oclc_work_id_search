@@ -90,7 +90,7 @@ def run_script():
 
 # Create the GUI
 root = tk.Tk()
-root.title("Work ID Lookup Tool")
+root.title("OCLC Number Lookup Tool")
 icon = tk.PhotoImage(file=(resource_path("cloud.png")))
 root.iconphoto(True, icon)
 
